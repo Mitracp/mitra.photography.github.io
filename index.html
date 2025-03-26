@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Photography Portfolio Gallery">
+    <title>Photography Gallery</title>
+    <style>
+        /* Basic CSS Styles for Layout */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 15px 0;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 15px;
+            padding: 20px;
+        }
+
+        .gallery figure {
+            margin: 0;
+            padding: 0;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header with Logo and Navigation -->
+    <header>
+        <h1>Photography Portfolio</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Gallery</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content: Gallery -->
+    <section class="gallery">
+        <figure>
+            <img src="https://drive.google.com/uc?id=1ABC12345DEFGHI" alt="Nature Landscape 1">
+            <figcaption>Nature Landscape 1</figcaption>
+        </figure>
+        <figure>
+            <img src="https://drive.google.com/uc?id=1XYZ67890QWERTY" alt="Urban Photography 1">
+            <figcaption>Urban Photography 1</figcaption>
+        </figure>
+        <figure>
+            <img src="https://drive.google.com/uc?id=1LMN98765PQRSTU" alt="Wildlife 1">
+            <figcaption>Wildlife 1</figcaption>
+        </figure>
+        <figure>
+            <img src="https://drive.google.com/uc?id=1DEF54321VWXYZA" alt="Portrait Photography 1">
+            <figcaption>Portrait Photography 1</figcaption>
+        </figure>
+        <!-- Add more image items as needed -->
+    </section>
+
+    <!-- Footer with Contact Links -->
+    <footer>
+        <p>&copy; 2025 Photography Portfolio | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+    </footer>
+
+</body>
+</html>
