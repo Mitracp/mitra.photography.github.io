@@ -3,118 +3,188 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Photography Portfolio Gallery">
-    <title>Photography Gallery</title>
+    <meta name="description" content="A stunning photography portfolio showcasing beautiful images.">
+    <title>Your Photography Portfolio</title>
     <style>
-        /* Basic CSS Styles for Layout */
-        body {
-            font-family: Arial, sans-serif;
+        /* Reset some default browser styles */
+        * {
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            box-sizing: border-box;
         }
 
+        /* Body and overall background */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #fff;
+            color: #333;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Hero Section */
         header {
-            background-color: #333;
+            height: 100vh;
+            background: url('https://source.unsplash.com/1600x900/?nature,landscape') no-repeat center center/cover;
+            position: relative;
+            text-align: center;
             color: white;
-            padding: 15px 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        header h1 {
+            font-size: 4rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+        }
+
+        header p {
+            font-size: 1.5rem;
+            margin-top: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+        }
+
+        /* Navigation bar */
+        nav {
+            position: absolute;
+            top: 20px;
+            left: 0;
+            width: 100%;
+            padding: 15px;
+            background-color: rgba(0, 0, 0, 0.6);
             text-align: center;
         }
 
         nav ul {
             list-style: none;
-            padding: 0;
         }
 
         nav ul li {
             display: inline;
-            margin-right: 20px;
+            margin-right: 30px;
         }
 
         nav ul li a {
             color: white;
             text-decoration: none;
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
 
         nav ul li a:hover {
-            text-decoration: underline;
+            color: #f39c12;
+            border-bottom: 2px solid #f39c12;
         }
 
+        /* Gallery Section */
         .gallery {
+            padding: 50px;
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 15px;
-            padding: 20px;
-        }
-
-        .gallery figure {
-            margin: 0;
-            padding: 0;
+            gap: 30px;
         }
 
         .gallery img {
             width: 100%;
             height: auto;
-            border-radius: 8px;
-            transition: transform 0.3s ease;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
         .gallery img:hover {
             transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
         }
 
-        footer {
-            background-color: #333;
-            color: white;
-            padding: 10px 0;
+        /* About Section */
+        #about {
+            background-color: #f4f4f4;
+            padding: 50px;
             text-align: center;
         }
 
-        footer a {
+        #about h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        #about p {
+            font-size: 1.1rem;
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+
+        /* Footer Section */
+        footer {
+            background-color: #333;
             color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        footer a {
+            color: #f39c12;
             text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 3rem;
+            }
+
+            header p {
+                font-size: 1.2rem;
+            }
         }
     </style>
 </head>
 <body>
 
-    <!-- Header with Logo and Navigation -->
+    <!-- Hero Section -->
     <header>
-        <h1>Photography Portfolio</h1>
         <nav>
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Gallery</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
+        <h1>Your Photography Portfolio</h1>
+        <p>Capturing moments through the lens</p>
     </header>
 
-    <!-- Main Content: Gallery -->
-    <section class="gallery">
-        <figure>
-            <img src="https://drive.google.com/uc?id=1ABC12345DEFGHI" alt="Nature Landscape 1">
-            <figcaption>Nature Landscape 1</figcaption>
-        </figure>
-        <figure>
-            <img src="https://drive.google.com/uc?id=1XYZ67890QWERTY" alt="Urban Photography 1">
-            <figcaption>Urban Photography 1</figcaption>
-        </figure>
-        <figure>
-            <img src="https://drive.google.com/uc?id=1LMN98765PQRSTU" alt="Wildlife 1">
-            <figcaption>Wildlife 1</figcaption>
-        </figure>
-        <figure>
-            <img src="https://drive.google.com/uc?id=1DEF54321VWXYZA" alt="Portrait Photography 1">
-            <figcaption>Portrait Photography 1</figcaption>
-        </figure>
-        <!-- Add more image items as needed -->
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery">
+        <div><img src="https://source.unsplash.com/500x300/?nature" alt="Nature Photography"></div>
+        <div><img src="https://source.unsplash.com/500x300/?landscape" alt="Landscape Photography"></div>
+        <div><img src="https://source.unsplash.com/500x300/?wildlife" alt="Wildlife Photography"></div>
+        <div><img src="https://source.unsplash.com/500x300/?portrait" alt="Portrait Photography"></div>
+        <div><img src="https://source.unsplash.com/500x300/?urban" alt="Urban Photography"></div>
+        <div><img src="https://source.unsplash.com/500x300/?city" alt="City Photography"></div>
     </section>
 
-    <!-- Footer with Contact Links -->
+    <!-- About Section -->
+    <section id="about">
+        <h2>About Me</h2>
+        <p>
+            I'm a passionate photographer who believes that a great photograph tells a story. Whether it's capturing nature's beauty, a fleeting moment, or a perfect portrait, I aim to share the world through my lens. Photography is my way of telling stories that words cannot fully express.
+        </p>
+    </section>
+
+    <!-- Footer Section -->
     <footer>
-        <p>&copy; 2025 Photography Portfolio | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+        <p>&copy; 2025 Your Name | <a href="mailto:your.email@example.com">Contact Me</a></p>
     </footer>
 
 </body>
